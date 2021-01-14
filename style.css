@@ -5,6 +5,7 @@
 :root {
   --waldorf-blue: #28325B;
   --light-waldorf-blue: #545b88;
+  --image-width: window.width * 551/980;
 }
 
 body {
@@ -102,6 +103,15 @@ img {
 article img {
   width: 100%;
   height: 300px;
+}
+
+figure img {
+  width: 100%;
+  height: var(--image-width);
+}
+
+figcaption {
+  font-size: 10px;
 }
 
 h4 {

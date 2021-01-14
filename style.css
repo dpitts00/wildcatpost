@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+  --waldorf-blue: #28325B;
+  --light-waldorf-blue: #545b88;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* .content is for the whole body of the page */
+/* I've reduced this to 3 columns, to make it simpler */
+/* justify along main axis (row); align along cross axis (col) */
+main {
+  background-color: #ffffff;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(200px, 300px));
+  grid-gap: 10px;
+  grid-auto-rows: minmax(0px, auto);
+}
+
+/* .logo is for the main Wildcat Post banner */
+header {
+  grid-row: 1;
+  grid-column: 1/4;
+}
+
+/* #logo is the id of the image itself (and the editor is the superego) */
+/* I've set the width to 100% of the page */
+#logo {
+  width: 100%;
+}
+
+/* .headerText is the text below the big logo banner */
+/* I've removed the margin and padding (whitespace), they can be changed */
+/* And I've center-aligned it */
+/* And added color, a font, and made it bold */
+.headerText {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: var(--waldorf-blue);
+  font-family: Cambria, serif;
+  font-weight: bold;
+}
+
+/* hr is short for "horizontal rule", a line across the page */
+hr {
+  border: solid 1px var(--waldorf-blue);
+  margin: 0;
+  grid-column: 1/4;
+
+}
+
+p {
+  font-family: 'Source Serif Pro', 'Times New Roman', 'Times', serif;
+  font-size: 14px;
+}
+
+menu {
+  grid-column: 1/4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height:20px;
+  margin: 0px;
+}
+
+.withShadow {
+  box-shadow: lightgray 0px 2px 1px 2px;
+}
+
+
+menu h5 {
+min-width: 160px;
+text-align: center;
+font-family: Avenir, sans-serif;
+font-size: 14px;
+font-weight: 600;
+text-transform: uppercase;
+}
+
+menu a {
+  text-decoration: none;
+}
+
+menu a:hover {
+  color: gray;
+}
+
+img {
+  width: 100%;
+  grid-column: 1/4;
+}
+
+article img {
+  width: 100%;
+  height: 300px;
+}
+
+h4 {
+  font-family: Avenir, sans-serif;
+  font-size: 36px;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+article {
+  grid-row: auto;
+  grid-column: 1/4;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+article a, div a {
+  text-decoration: none;
+  color: auto;
+}
+
+/* section is used for all the lists on the article archive page */
+section {
+  grid-column: 1/4;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.otherSections {
+  grid-column: 1/4;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  flex-direction: row;
+}
+
+.wildcatLive {
+  margin: 20px; 
+  height: 250px;
+  width: 200px;
+  text-align: center;
+  background-color: #ddd;
+  border: solid 1px var(--waldorf-blue)
+}
+
+.articles {
+  margin: 20px;
+  height: 250px;
+  width: 300px;
+  text-align: center;
+  background-color: #ddd;
+  border: solid 1px var(--waldorf-blue)
+}
+
+.rightMenu {
+  margin: 20px;
+  width: 200px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.rightMenuItem {
+  border: 1px solid var(--waldorf-blue);
+  background-color: #dddddd;
+  line-height: 12px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+/* h2 is the section heading here */
+
+h2 {
+  font-family: "Source Serif Pro", "Georgia", serif;
+  text-transform: uppercase;
+  color: var(--waldorf-blue);
+  font-weight: normal;
+  text-align: center;
+}
+
+ul li {
+  list-style: none;
+  font-family: 'Source Serif Pro', 'Times New Roman', 'Times', serif;
+}
+
+h6 {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+  color: #ffffff;
+  background-color: var(--waldorf-blue);
+  line-height: 20px;
+  padding: 10px;
+  height: 40px;
+  box-shadow: lightgray 5px 5px;
+}
+
+li ul li {
+  list-style: none;
+  height: 40px;
+  border: solid 1px var(--light-waldorf-blue);
+  /* for a border collapse */
+  border-bottom: none;
+  line-height: 20px;
+  padding: 10px;
+}
+
+li ul li:last-of-type {
+  border-bottom: solid 1px var(--light-waldorf-blue);
+}
+
+a {
+  color: var(--waldorf-blue);
+}
+
+a:visited {
+  color: var(--waldorf-blue);
+}
+
+a:hover {
+  color: var(--light-waldorf-blue);
+}
+
+
+/* footer is for the footer of the page, whatever that looks like */
+footer {
+  grid-row: auto;
+  grid-column: 1/4;
+  height: 40px;
+  font-family: Avenir, sans-serif;
+
+  color: #ffffff;
+  background-color: #aaaaaa;
+
+}
+
+footer p {
+  font-family: Avenir, sans-serif;
+  font-size: 10px;
+  font-weight: 200;
+  text-align: center;
+  line-height: 20px;
+}

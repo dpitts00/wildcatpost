@@ -154,7 +154,9 @@ section {
 .wildcatLive {
   margin: 20px; 
   padding: 0;
+  height: 329px;
   width: 400px;
+  grid-row: 4/6;
   text-align: center;
   background-color: #ddd;
   border: solid 1px var(--waldorf-blue)

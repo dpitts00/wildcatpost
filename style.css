@@ -118,7 +118,7 @@ h4 {
   font-family: Avenir, sans-serif;
   font-size: 36px;
   font-weight: 200;
-  text-align: center;
+  text-align: left;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -153,17 +153,8 @@ section {
 
 .wildcatLive {
   margin: 20px; 
-  height: 250px;
-  width: 200px;
-  text-align: center;
-  background-color: #ddd;
-  border: solid 1px var(--waldorf-blue)
-}
-
-.articles {
-  margin: 20px;
-  height: 250px;
-  width: 300px;
+  padding: 0;
+  width: 400px;
   text-align: center;
   background-color: #ddd;
   border: solid 1px var(--waldorf-blue)
